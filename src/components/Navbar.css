@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700,800");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,8 +23,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8vh;
-  background: blue;
+  height: 80px;
+  background: #0b2535;
+  box-shadow: 5px 5px 10px #091e2a, -5px -5px 10px #0d2c40;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -35,7 +38,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 3rem;
 }
 .nav-toggler div {
   width: 2.5rem;
@@ -47,6 +49,9 @@ a {
 .nav-toggler {
   cursor: pointer;
   display: none;
+}
+.nav-seperator {
+  width: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -79,4 +84,74 @@ a {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
+}
+.nav-item {
+  width: 90px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: transparent;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.button-group:hover {
+  color: #d8be68;
+}
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b2535;
+  width: 46px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px #071620, -3px -3px 5px #0f344a;
+  padding: 10px 0 8px 0;
+  box-shadow: 3px 3px 5px #071620, -3px -3px 5px #0f344a;
+  -webkit-transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  -o-transition: width 0.4s;
+  transition: width 0.4s;
+}
+.navbar-button:hover {
+  width: 70px;
+  background: #1a3c52;
+}
+.navbar-button:active {
+  background: #091f2c;
+}
+.button-text {
+  font-size: 10px;
+}
+.waviy {
+  position: relative;
+  font-size: 50px;
+  color: transparent;
+}
+.waviy span {
+  font-family: "Exo", sans-serif;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.1s calc(0.05s * var(--i));
+}
+.baviy {
+  position: relative;
+  font-size: 50px;
+  color: #d8be68;
+}
+.baviy span {
+  font-family: "Exo", sans-serif;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: color calc(1s * var(--i));
+  -moz-transition: color calc(0.5s * var(--i));
+  -o-transition: color calc(0.5s * var(--i));
+  transition: color 0.35s calc(0.2s * var(--i));
 }
